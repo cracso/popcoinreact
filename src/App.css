@@ -203,24 +203,13 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   }
   .hero-banner {
     width: 100%;
-    max-width: 100%;
     margin: 0;
-    padding: 1.2em 0.2em 1em 0.2em;
-    border-radius: 0 0 24px 24px;
-    left: unset;
-    right: unset;
+    /* Removed: max-width: 100vw; left/right: 50%; negative margins */
   }
   .hero-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    left: unset;
-    right: unset;
-    position: static;
-    gap: 1em !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    /* Removed: max-width: 100vw; left/right: 50%; negative margins */
   }
 }
 @media (max-width: 900px) {
@@ -235,24 +224,13 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   }
   .hero-banner {
     width: 100%;
-    max-width: 100%;
     margin: 0;
-    padding: 1.2em 0.2em 1em 0.2em;
-    border-radius: 0 0 24px 24px;
-    left: unset;
-    right: unset;
+    /* Removed: max-width: 100vw; left/right: 50%; negative margins */
   }
   .hero-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    left: unset;
-    right: unset;
-    position: static;
-    gap: 1em !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    /* Removed: max-width: 100vw; left/right: 50%; negative margins */
   }
 }
 .how-it-works h2, .trust-section h2 { text-align: center; font-size: 1.7em; margin-bottom: 1.5em; }
