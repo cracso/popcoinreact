@@ -32,21 +32,21 @@ nav img { height: 2.5em; vertical-align: middle; margin-right: 0.7em; border-rad
 }
 main {
   max-width: 1100px;
-  margin: 2em auto 1.5em auto;
+  margin: 1.2em auto 1em auto;
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 4px 24px #0001;
-  padding: 1.5em 1.2em 1.2em 1.2em;
+  padding: 1em 0.7em 0.7em 0.7em;
 }
 h1, h2 { color: #1a2233; font-family: 'Segoe UI', Arial, sans-serif; }
 h1 { font-size: 2.1em; margin-bottom: 0.5em; }
 h2 { font-size: 1.3em; margin-top: 2em; }
-.doc-toc { margin-bottom: 2.5em; background: #f3f5fa; border-radius: 10px; padding: 1.2em 1.5em; box-shadow: 0 1px 4px #0001; }
+.doc-toc { margin-bottom: 1.2em; background: #f3f5fa; border-radius: 10px; padding: 0.7em 1em; box-shadow: 0 1px 4px #0001; }
 .doc-toc h2 { margin-top: 0; }
 .doc-toc ol { padding-left: 1.2em; }
 .doc-section {
-  margin-bottom: 2.5em;
-  padding: 2em 2.5em;
+  margin-bottom: 1.2em;
+  padding: 1em 1.2em;
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 24px #0001;
@@ -55,38 +55,38 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   margin-right: auto;
 }
 .doc-section h1, .doc-section h2, .doc-section h3, .doc-section h4 {
-  margin-top: 1.5em;
-  margin-bottom: 0.7em;
+  margin-top: 0.7em;
+  margin-bottom: 0.3em;
   line-height: 1.2;
 }
 .doc-section h1 {
-  font-size: 2.2em;
+  font-size: 2em;
   margin-top: 0;
 }
 .doc-section h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .doc-section h3 {
-  font-size: 1.2em;
+  font-size: 1.08em;
   color: #4a6c8a;
 }
 .doc-section h4 {
-  font-size: 1.1em;
+  font-size: 1em;
   color: #4a6c8a;
 }
 .doc-section ul, .doc-section ol {
-  margin-bottom: 1.5em;
-  margin-top: 0.5em;
-  padding-left: 1.5em;
-  line-height: 1.7;
+  margin-bottom: 0.7em;
+  margin-top: 0.2em;
+  padding-left: 1.2em;
+  line-height: 1.6;
 }
 .doc-section li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 .doc-section p {
-  margin-bottom: 1.2em;
-  margin-top: 0.5em;
-  line-height: 1.7;
+  margin-bottom: 0.7em;
+  margin-top: 0.2em;
+  line-height: 1.6;
 }
 .doc-toc {
   background: #f3f5fa;
@@ -116,10 +116,10 @@ h2 { font-size: 1.3em; margin-top: 2em; }
 }
 .hero-banner {
   background: linear-gradient(120deg,#eaf2fa 60%,#f9f6ff 100%);
-  padding: 2.5em 0 2em 0;
+  padding: 1.2em 0 1em 0;
   border-radius: 24px 24px 40px 40px;
   box-shadow: 0 12px 40px #0002;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.8em;
   position: relative;
   overflow: hidden;
   max-width: 100%;
@@ -131,7 +131,7 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 3.5em;
+  gap: 2em;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
@@ -140,10 +140,10 @@ h2 { font-size: 1.3em; margin-top: 2em; }
 .hero-img { flex: 1 1 420px; min-width: 320px; max-width: 600px; display: flex; justify-content: center; align-items: center; }
 .hero-img img { max-width: 540px; width: 100%; height: auto; border-radius: 32px; box-shadow: 0 12px 40px #0002; object-fit: contain; background: #eaf2fa; }
 .hero-text { flex: 1 1 340px; min-width: 320px; max-width: 520px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.powered { background: #1a2233; color: #fff; font-weight: 700; padding: 0.5em 1.5em; border-radius: 22px; font-size: 1.18em; margin-bottom: 1.3em; letter-spacing: 0.5px; }
-.hero-text h1 { font-size: 3.2em; text-align: center; margin-bottom: 0.2em; line-height: 1.08; }
-.hero-text h2 { text-align: center; font-size: 1.7em; margin-bottom: 1.3em; color: #2a3a4a; font-weight: 500; }
-.sub-headline { font-size: 1.22em; max-width: 480px; margin: 0 0 2.2em 0; text-align: center; }
+.powered { background: #1a2233; color: #fff; font-weight: 700; padding: 0.3em 1em; border-radius: 22px; font-size: 1.08em; margin-bottom: 0.7em; letter-spacing: 0.5px; }
+.hero-text h1 { font-size: 2.5em; text-align: center; margin-bottom: 0.1em; line-height: 1.08; }
+.hero-text h2 { text-align: center; font-size: 1.2em; margin-bottom: 0.7em; color: #2a3a4a; font-weight: 500; }
+.sub-headline { font-size: 1.08em; max-width: 480px; margin: 0 0 1.2em 0; text-align: center; }
 .cta-buttons { display: flex; justify-content: center; gap: 1.2em; margin-bottom: 0; }
 .btn {
   border: none;
@@ -277,10 +277,10 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   }
 }
 .how-it-works h2, .trust-section h2 { text-align: center; font-size: 1.7em; margin-bottom: 1.5em; }
-.steps-grid, .trust-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1em; }
-.step-card, .feature-card { background: #f7f8fa; padding: 1em 0.7em; border-radius: 12px; box-shadow: 0 2px 8px #0001; display: flex; flex-direction: column; align-items: center; flex: 1 1 220px; min-width: 220px; max-width: 320px; }
-.feature-card { background: #fff; min-width: 200px; max-width: 260px; padding: 1.3em 1em; }
-.icon-container { width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; background: none; border-radius: 0; box-shadow: none; }
+.steps-grid, .trust-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5em; }
+.step-card, .feature-card { background: #f7f8fa; padding: 0.5em 0.5em; border-radius: 12px; box-shadow: 0 2px 8px #0001; display: flex; flex-direction: column; align-items: center; flex: 1 1 220px; min-width: 220px; max-width: 320px; }
+.feature-card { background: #fff; min-width: 200px; max-width: 260px; padding: 0.7em 0.5em; }
+.icon-container { width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto; background: none; border-radius: 0; box-shadow: none; }
 .icon-container img { width: 100px; height: 100px; object-fit: contain; display: block; }
 .about-img { display: block; margin: 2em auto; max-width: 220px; width: 60%; border-radius: 16px; box-shadow: 0 2px 12px #0002; }
 .read-more-link { color: #1a2233; text-decoration: underline; font-weight: 600; }
