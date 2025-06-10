@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A React project for PopCoin.",
   "main": "index.js",
-  "homepage": "https://cracso.github.io/popcoinreact",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
