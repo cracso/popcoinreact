@@ -6,7 +6,7 @@ header {
   box-shadow: 0 2px 16px #0003;
   border-radius: 0 0 18px 18px;
   position: sticky;
-  top: 0;
+  top: ;
   z-index: 100;
   width: 100%; /* Changed from 100vw to 100% to align with main content */
 }
@@ -121,7 +121,6 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   box-shadow: 0 12px 40px #0002;
   margin-bottom: 0.8em;
   position: relative;
-  overflow: hidden;
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -191,6 +190,16 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   box-shadow: 0 6px 24px 0 #ffd70044, 0 2px 8px #5865f233;
   transform: scale(1.045);
 }
+.cta-buttons a, .btn {
+  border-radius: 9999px !important;
+  /* Ensure all corners are fully rounded */
+  overflow: visible !important;
+  /* Prevent parent clipping */
+}
+.cta-buttons {
+  overflow: visible !important;
+  /* Prevent parent container from clipping children */
+}
 @media (max-width: 900px) {
   .btn, .cta-buttons a {
     width: 100%;
@@ -231,29 +240,6 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   }
 }
 @media (max-width: 600px) {
-  .hero-img, .hero-text {
-    min-width: unset !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
-@media (max-width: 900px) {
-  .btn, .cta-buttons a {
-    width: 100%;
-    font-size: 1.08em;
-    padding: 1.1em 0.5em !important;
-    margin: 0;
-    border-radius: 9999px !important;
-    box-shadow: 0 2px 8px #0001;
-    display: block;
-  }
-  .hero-banner {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
   .hero-content {
     width: 100%;
     max-width: 100%;
@@ -388,8 +374,8 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   }
   .hero-content { flex-direction: column !important; gap: 1.2em !important; align-items: center !important; }
   .hero-img img { max-width: 90vw !important; width: 90vw !important; margin: 0 auto; display: block; border-radius: 18px !important; }
-  .cta-buttons { flex-direction: column !important; gap: 0.7em !important; width: 100%; }
-  .cta-buttons a { width: 100%; text-align: center; font-size: 1.15em; padding: 1.1em 0.5em !important; margin: 0; border-radius: 12px !important; box-shadow: 0 2px 8px #0001; display: block; }
+  .cta-buttons { flex-direction: column !important; gap: 0.7em !important; width: 100%; align-items: center;}
+  .cta-buttons a { width: 100%; text-align: center; font-size: 1.15em; padding: 1.1em 0.5em !important; margin: 0; border-radius: 9999px !important; box-shadow: 0 2px 8px #0001; display: block; }
   .steps-grid, .trust-grid { flex-direction: column !important; gap: 1.2em !important; }
   .step-card, .feature-card { max-width: 98vw !important; margin: 0 auto; padding: 1.2em 0.7em !important; }
   .icon-container img { width: 70px !important; height: 70px !important; }
@@ -453,7 +439,7 @@ h2 { font-size: 1.3em; margin-top: 2em; }
     gap: 1em !important; /* Reduced gap for mobile */
     align-items: center !important;
     width: 100% !important; /* Changed from 100vw to 100% to prevent overflow */
-    margin: 0;
+    margin: 0 auto !important;
     box-sizing: border-box;
   }
   .col-lg-6 {
