@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/popcoinreact/static/css/main.5419e364.css",
+    "main.js": "/popcoinreact/static/js/main.0abe71a3.js",
+    "static/media/coin-lock.png": "/popcoinreact/static/media/coin-lock.48dcf2bf90c8dd5854cc.png",
+    "static/media/pop-hero.png": "/popcoinreact/static/media/pop-hero.a4be5c584f9c0e65a7b6.png",
+    "static/media/step3-bot-crack.png.png": "/popcoinreact/static/media/step3-bot-crack.png.05592156a277b4ef5f33.png",
+    "static/media/step1-coin-shield.png": "/popcoinreact/static/media/step1-coin-shield.7e1fae2b8bd7376a92b8.png",
+    "static/media/open-book.png": "/popcoinreact/static/media/open-book.9c75f2dbf206886725f6.png",
+    "static/media/logo-balance.png": "/popcoinreact/static/media/logo-balance.b79b787bcda52a74399a.png",
+    "static/media/$pop-coin.png": "/popcoinreact/static/media/$pop-coin.c35da5b251e34976eff2.png",
+    "static/media/icon-governance.png": "/popcoinreact/static/media/icon-governance.3c083bda97885a5cc6fb.png",
+    "static/media/icon-cardano.png": "/popcoinreact/static/media/icon-cardano.7ec11a8b09497f67c932.png",
+    "static/media/sloth-mid.png": "/popcoinreact/static/media/sloth-mid.83d645c05a550dae3c89.png",
+    "index.html": "/popcoinreact/index.html",
+    "main.5419e364.css.map": "/popcoinreact/static/css/main.5419e364.css.map",
+    "main.0abe71a3.js.map": "/popcoinreact/static/js/main.0abe71a3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5419e364.css",
+    "static/js/main.0abe71a3.js"
+  ]
+}
