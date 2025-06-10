@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import popCoinLogo from './assets/$pop-coin.png';
 
-const Header = ({ section, setSection }) => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleNavClick = (target) => {
-    setSection(target);
-    setMenuOpen(false);
-  };
 
   return (
     <header>
       <nav className="main-nav">
         <h2 className="logo-title">
           <img src={popCoinLogo} alt="PoP Coin Logo" />
-          POP-COIN
         </h2>
         <button className="nav-toggle" aria-label="Toggle navigation" onClick={() => setMenuOpen(m => !m)}>
           <span className="hamburger"></span>
@@ -22,9 +17,9 @@ const Header = ({ section, setSection }) => {
           <span className="hamburger"></span>
         </button>
         <div className={`internal-links${menuOpen ? ' open' : ''}`}>
-          <a href="#" className={section === 'home' ? 'active' : ''} onClick={() => handleNavClick('home')}>Home</a>
-          <a href="#" className={section === 'litepaper' ? 'active' : ''} onClick={() => handleNavClick('litepaper')}>Litepaper</a>
-          <a href="#" className={section === 'about' ? 'active' : ''} onClick={() => handleNavClick('about')}>About</a>
+          <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Home</NavLink>
+          <NavLink to="/litepaper" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Litepaper</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>About</NavLink>
         </div>
       </nav>
     </header>

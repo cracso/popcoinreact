@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import popCoinLogo from './assets/logo-balance.png';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './Header';
 import HeroBanner from './HeroBanner';
 import HowItWorks from './HowItWorks';
@@ -10,18 +9,32 @@ import LitepaperSection from './LitepaperSection';
 import AboutSection from './AboutSection';
 import Footer from './Footer';
 
-function App() {
-  const [section, setSection] = useState('home');
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
+function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
-        <Header section={section} setSection={setSection} />
+        <Header />
         <main>
           <Routes>
-            <Route path="/" element={<AboutSection />} />
+            <Route path="/" element={
+              <>
+                <HeroBanner />
+                <HowItWorks />
+                <TrustSection />
+              </>
+            } />
             <Route path="/litepaper" element={<LitepaperSection />} />
             <Route path="/trust" element={<TrustSection />} />
+            <Route path="/about" element={<AboutSection />} />
           </Routes>
         </main>
         <Footer />
