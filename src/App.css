@@ -272,26 +272,26 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   }
 }
 @media (max-width: 600px) {
+  .hero-banner {
+    padding: 0.7em 0 0.5em 0; /* Adjusted padding to reduce top/bottom space */
+    border-radius: 0 0 24px 24px;
+    margin-bottom: 0.5em; /* Reduced margin-bottom */
+  }
   .hero-content {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    flex-direction: column !important;
+    gap: 0.8em !important; /* Slightly reduced gap */
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
     box-sizing: border-box;
   }
-  .hero-img, .hero-text {
-    min-width: unset !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
-  }
-  .hero-img img {
-    max-width: 100% !important;
-    width: 100% !important;
+  /* Specific styles for the hero image within the hero banner */
+  .hero-banner .hero-img img {
+    max-width: 95vw !important; /* Increased width to utilize more screen space */
+    width: 95vw !important; /* Increased width to utilize more screen space */
     margin: 0 auto;
     display: block;
     border-radius: 18px !important;
-    box-sizing: border-box;
   }
   .cta-buttons {
     flex-direction: column !important;
@@ -421,13 +421,42 @@ h2 { font-size: 1.3em; margin-top: 2em; }
     padding: 0.5em 0.7em;
   }
   .hero-banner {
-    padding: 0.7em 0 0.5em 0;
+    padding: 0.7em 0 0.5em 0; /* Adjusted padding to reduce top/bottom space */
     border-radius: 0 0 24px 24px;
+    margin-bottom: 0.5em; /* Reduced margin-bottom */
   }
-  .hero-content { flex-direction: column !important; gap: 1.2em !important; align-items: center !important; }
-  .hero-img img { max-width: 90vw !important; width: 90vw !important; margin: 0 auto; display: block; border-radius: 18px !important; }
-  .cta-buttons { flex-direction: column !important; gap: 0.7em !important; width: 100%; align-items: center;}
-  .cta-buttons a { width: 90%; text-align: center; font-size: 1.15em; padding: 1.1em 0.5em !important; margin: 0; border-radius: 9999px !important; box-shadow: 0 2px 8px #0001; display: block; }
+  .hero-content {
+    flex-direction: column !important;
+    gap: 0.8em !important; /* Slightly reduced gap */
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+  }
+  /* Specific styles for the hero image within the hero banner */
+  .hero-banner .hero-img img {
+    max-width: 95vw !important; /* Increased width to utilize more screen space */
+    width: 95vw !important; /* Increased width to utilize more screen space */
+    margin: 0 auto;
+    display: block;
+    border-radius: 18px !important;
+  }
+  .cta-buttons {
+    flex-direction: column !important;
+    gap: 0.7em !important;
+    width: 100%;
+    align-items: center;
+  }
+  .cta-buttons a {
+    width: 100%;
+    font-size: 0.9em; /* Consistent and smaller font size for mobile */
+    padding: 0.8em 0.5em !important; /* Reduced padding for mobile */
+    margin: 0;
+    border-radius: 9999px !important;
+    box-shadow: 0 2px 8px #0001;
+    display: block;
+    text-align: center;
+  }
   .steps-grid, .trust-grid { flex-direction: column !important; gap: 1.2em !important; }
   .step-card, .feature-card { max-width: 98vw !important; margin: 0 auto; padding: 1.2em 0.7em !important; }
   .icon-container img { width: 70px !important; height: 70px !important; }
