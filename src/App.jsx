@@ -5,7 +5,7 @@ import Header from './Header';
 import HeroBanner from './HeroBanner';
 import HowItWorks from './HowItWorks';
 import TrustSection from './TrustSection';
-import LitepaperSection from './LitepaperSection';
+import ManifestoSection from './ManifestoSection';
 import AboutSection from './AboutSection';
 import Footer from './Footer';
 
@@ -32,7 +32,7 @@ function App() {
                 <TrustSection />
               </>
             } />
-            <Route path="/litepaper" element={<LitepaperSection />} />
+            <Route path="/manifesto" element={<ManifestoSection />} />
             <Route path="/trust" element={<TrustSection />} />
             <Route path="/about" element={<AboutSection />} />
           </Routes>

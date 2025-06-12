@@ -18,7 +18,7 @@ const Header = () => {
         </button>
         <div className={`internal-links${menuOpen ? ' open' : ''}`}>
           <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Home</NavLink>
-          <NavLink to="/litepaper" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Litepaper</NavLink>
+          <NavLink to="/manifesto" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Manifesto</NavLink>
           <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>About</NavLink>
         </div>
       </nav>
