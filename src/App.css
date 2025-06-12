@@ -273,32 +273,42 @@ h2 { font-size: 1.3em; margin-top: 2em; }
 }
 @media (max-width: 600px) {
   .hero-banner {
-    padding: 0.2em 0;
+    padding: 0.1em 0;
     margin-bottom: 0.1em;
   }
   .hero-content {
-    flex-direction: column !important;
-    gap: 0.3em !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    box-sizing: border-box;
+    gap: 0.2em !important;
   }
-  /* Specific styles for the hero image within the hero banner */
   .hero-banner .hero-img img {
-    max-width: 95vw !important; /* Increased width to utilize more screen space */
-    width: 95vw !important; /* Increased width to utilize more screen space */
+    max-width: 95vw !important;
+    width: 95vw !important;
     margin: 0 auto;
     display: block;
     border-radius: 18px !important;
   }
-  /* Specific mobile adjustments for the about image */
   .about-img {
     margin: 0.8em auto !important;
     max-width: 95vw !important;
     width: 95vw !important;
     border-radius: 18px !important;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.125) !important;
+    box-sizing: border-box !important;
+  }
+  .cta-buttons {
+    flex-direction: column !important; /* THIS IS THE KEY FIX: Stacks buttons vertically */
+    gap: 0.7em !important; /* Keep the gap between stacked buttons */
+    width: 90%; /* Ensure the container is constrained */
+    align-items: center; /* Center the stacked buttons */
+  }
+  .cta-buttons a {
+    width: 90%; /* Ensure individual buttons take up consistent width */
+    font-size: 0.9em;
+    padding: 0.8em 0.5em !important;
+    margin: 0;
+    border-radius: 9999px !important;
+    box-shadow: 0 2px 8px #0001;
+    display: block;
+    text-align: center;
   }
 }
 .how-it-works h2, .trust-section h2 { text-align: center; font-size: 1.7em; margin-bottom: 1.5em; }
@@ -307,7 +317,7 @@ h2 { font-size: 1.3em; margin-top: 2em; }
 .feature-card { background: #fff; min-width: 200px; max-width: 260px; padding: 0.7em 0.5em; box-shadow: none; /* Remove box-shadow completely */ border: none; /* Ensure no border is present */ }
 .icon-container { width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto; background: none; border-radius: 0; box-shadow: none; }
 .icon-container img { width: 100px; height: 100px; object-fit: contain; display: block; }
-.about-img { display: block; margin: 1.2em auto; max-width: 95vw; width: 95vw; height: auto; border-radius: 18px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.125); object-fit: contain; background: #eaf2fa; }
+.about-img { display: block; margin: 1.2em auto; max-width: 540px; width: 100%; height: auto; border-radius: 32px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.125); object-fit: contain; background: #eaf2fa; box-sizing: border-box; }
 .read-more-link { color: #1a2233; text-decoration: underline; font-weight: 600; }
 /* Modern Nav Bar Styles */
 .main-nav {
@@ -412,20 +422,15 @@ h2 { font-size: 1.3em; margin-top: 2em; }
     padding: 0.5em 0.7em;
   }
   .hero-banner {
-    padding: 0.2em 0;
+    padding: 0.1em 0;
     margin-bottom: 0.1em;
   }
   .hero-content {
-    flex-direction: column !important;
-    gap: 0.3em !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    box-sizing: border-box;
+    gap: 0.2em !important;
   }
   /* Specific styles for the hero image within the hero banner */
   .hero-banner .hero-img img {
-    max-width: 95vw !important; /* Increased width to utilize more screen space */
+    max-width: 90% !important; /* Increased width to utilize more screen space */
     width: 95vw !important; /* Increased width to utilize more screen space */
     margin: 0 auto;
     display: block;
@@ -434,10 +439,11 @@ h2 { font-size: 1.3em; margin-top: 2em; }
   /* Specific mobile adjustments for the about image */
   .about-img {
     margin: 0.8em auto !important;
-    max-width: 95vw !important;
-    width: 95vw !important;
+    max-width: 100% !important;
+    width: 100% !important;
     border-radius: 18px !important;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.125) !important;
+    box-sizing: border-box !important;
   }
   .steps-grid, .trust-grid { flex-direction: column !important; gap: 1.2em !important; }
   .step-card, .feature-card { max-width: 98vw !important; margin: 0 auto; padding: 1.2em 0.7em !important; }
@@ -498,7 +504,6 @@ h2 { font-size: 1.3em; margin-top: 2em; }
 
 @media (max-width: 900px) {
   .hero-content {
-    flex-direction: column !important;
     gap: 1em !important; /* Reduced gap for mobile */
     align-items: center !important;
     width: 100% !important; /* Changed from 100vw to 100% to prevent overflow */
