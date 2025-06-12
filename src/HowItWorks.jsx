@@ -1,32 +1,41 @@
 import React from 'react';
-import step1 from './assets/step1-coin-shield.png';
-import step2 from './assets/icon-governance.png';
-import step3 from './assets/step3-bot-crack.png.png';
+// import step1 from './assets/step1-coin-shield.png';
+// import step2 from './assets/icon-governance.png';
+// import step3 from './assets/step3-bot-crack.png.png';
 
 const HowItWorks = () => (
   <section className="how-it-works">
-    <h2>The Sentry Sloth's 3 Patient Steps to Fairness</h2>
+    <h2>The Problem: Why Fair Drops Matter</h2>
     <div className="steps-grid">
       <div className="step-card">
         <div className="icon-container">
-          <img src={step1} alt="Coin with shield icon" />
+          {/* PLACEHOLDER: Bot Icon (see AI prompt in project notes) */}
+          <div style={{width:80,height:80,background:'#fff',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',boxShadow:'0 2px 8px #0001',fontSize:'2.2em',color:'#b00',textAlign:'center'}}>
+            <span style={{opacity:0.7}}>[Bot Icon]</span>
+          </div>
         </div>
-        <h3>Prove Your Patience</h3>
-        <p>By staking $PoP Coin, you signal your genuine commitment. It's a simple action for a human, but a costly and complex hurdle for bot farms to overcome at scale.</p>
+        <h3>The Bot</h3>
+        <p>Menacing robot head. Modern, minimalist, dark gray with a glowing red eye. (See AI prompt in project notes)</p>
       </div>
       <div className="step-card">
         <div className="icon-container">
-          <img src={step2} alt="Lottery ticket or key icon" />
+          {/* PLACEHOLDER: Fan Icon (see AI prompt in project notes) */}
+          <div style={{width:80,height:80,background:'#fff',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',boxShadow:'0 2px 8px #0001',fontSize:'2.2em',color:'#888',textAlign:'center'}}>
+            <span style={{opacity:0.7}}>[Fan Icon]</span>
+          </div>
         </div>
-        <h3>Get a Fair Chance</h3>
-        <p>Your stake gives you a fair, weighted chance in limited drops. This isn't about paying to win; it's about leveling the playing field so real passion is rewarded.</p>
+        <h3>The Fan</h3>
+        <p>Sad human face, cracked phone. Modern, minimalist, muted colors. (See AI prompt in project notes)</p>
       </div>
       <div className="step-card">
         <div className="icon-container">
-          <img src={step3} alt="Bot cracking icon" />
+          {/* PLACEHOLDER: Hero Icon (see AI prompt in project notes) */}
+          <div style={{width:80,height:80,background:'#fff',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',boxShadow:'0 2px 8px #0001',fontSize:'2.2em',color:'#2a6cbb',textAlign:'center'}}>
+            <span style={{opacity:0.7}}>[Hero Icon]</span>
+          </div>
         </div>
-        <h3>Make Bots Obsolete</h3>
-        <p>Our system is designed with fees and token burns that make large-scale botting economically unprofitable over time. We're patiently squeezing them out of the picture.</p>
+        <h3>The Hero</h3>
+        <p>Sentry Sloth's heroic face, confident, friendly browns and blue. (See AI prompt in project notes)</p>
       </div>
     </div>
   </section>
