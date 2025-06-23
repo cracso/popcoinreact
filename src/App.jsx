@@ -49,7 +49,14 @@ const FadeInSection = ({ children }) => {
     );
 };
 
-function App() {
+// Main App Component
+export default function App() {
+  useEffect(() => {
+    document.body.style.fontFamily = "'Inter', sans-serif";
+    document.body.style.backgroundColor = '#FDFBF8';
+    document.body.style.color = '#44403c';
+    document.documentElement.classList.add('scroll-smooth');
+  }, []);
   return (
     <Router>
       <div className="App">
@@ -73,5 +80,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
