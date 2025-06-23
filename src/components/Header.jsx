@@ -47,11 +47,27 @@ const Header = () => {
             </div>
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <nav className="mobile-menu open">
+                <nav className="mobile-menu open" aria-label="Mobile Navigation Menu">
                     {navLinks.map(link => (
-                        <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>{link.text}</a>
+                        <a
+                            key={link.href}
+                            href={link.href}
+                            onClick={() => setMenuOpen(false)}
+                            tabIndex={0}
+                            role="menuitem"
+                        >
+                            {link.text}
+                        </a>
                     ))}
-                    <a href="#" className="join-btn" style={{ margin: '1rem auto 0', display: 'block', maxWidth: 200 }}>Join Us</a>
+                    <a
+                        href="https://discord.gg/NXRUFmHBZU"
+                        className="join-btn"
+                        style={{ margin: '1rem auto 0', display: 'block', maxWidth: 200 }}
+                        tabIndex={0}
+                        role="menuitem"
+                    >
+                        Join Us
+                    </a>
                 </nav>
             )}
         </header>

@@ -17,8 +17,8 @@ const ArtAndEthos = () => (
                         </p>
                     </div>
                      <div className="art-ethos-images">
-                        <img src="https://placehold.co/400x400/FFF7E8/44403C?text=Sentry\n%23001" alt="Placeholder for a Sentry Sloth NFT" className="art-ethos-img"/>
-                        <img src="https://placehold.co/400x400/E8F5E9/44403C?text=Sentry\n%23002" alt="Placeholder for a Sentry Sloth NFT" className="art-ethos-img mt"/>
+                        <img src={require('../assets/Sentry_004.png')} alt="Sentry #001 NFT" className="art-ethos-img"/>
+                        <img src={require('../assets/Sentry_001.png')} alt="Sentry #002 NFT" className="art-ethos-img mt"/>
                     </div>
                 </div>
             </div>
