@@ -8,10 +8,11 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
+            if (isMenuOpen) setMenuOpen(false); // Close mobile menu on scroll
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [isMenuOpen]);
 
     const navLinks = [
         { href: '#art', text: 'The Art' },
