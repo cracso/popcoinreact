@@ -23,7 +23,6 @@ export default function App() {
       <main>
         <Hero />
         <ArtistIntro />
-        <ArtAndEthos />
         <Mission />
         <Journey />
         <CollectorExperience />

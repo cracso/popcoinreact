@@ -3,16 +3,16 @@ import FadeInSection from './FadeInSection';
 
 const Journey = () => {
     const journeyPhases = [
-        { phase: "Phase 1", principle: "The Genesis Collection", description: "My singular focus is on the art. The first wave will be released at a natural, un-rushed pace, ensuring each piece is crafted with integrity." },
-        { phase: "Phase 2", principle: "Cultivating The Sanctuary", description: "As collectors arrive, my priority will be building our private community space—a cozy digital haven for holders to connect directly with me." },
-        { phase: "Phase 3", principle: "Deepening Our Impact", description: "Together, we will decide how to best grow The Sanctuary Fund, explore meaningful collaborations, and determine what comes next for the world of Sentry." },
+        { phase: "Phase 1", principle: "The Genesis Collection", description: "My initial focus is singular: creating and releasing the first wave of Sentry the Sloth NFTs. Each one will be meticulously crafted and released as it's completed, allowing the collection to grow at a natural, un-rushed pace." },
+        { phase: "Phase 2", principle: "Cultivating The Sanctuary", description: "As the first collectors join, my priority will be building our community space. This will be a private, cozy corner of the internet for holders to share ideas, appreciate the art, and get to know the artist directly." },
+        { phase: "Phase 3", principle: "Deepening Our Impact", description: "The future of The Sentry Sanctuary will be shaped by its earliest supporters. We will collectively decide on the best ways to grow our charitable impact, explore potential collaborations, and determine what comes next for the world of Sentry." },
     ];
 
     // Define an array of image icons (one for each phase)
     const journeyIcons = [
         <img src={require('../assets/Icon- (1).png')} alt="Phase 1 Icon" className="journey-icon" key="icon1" />,
-        <img src={require('../assets/Icon- (2).png')} alt="Phase 2 Icon" className="journey-icon" key="icon2" />,
-        <img src={require('../assets/Icon- (3).png')} alt="Phase 3 Icon" className="journey-icon" key="icon3" />
+        <img src={require('../assets/Icon- (3).png')} alt="Phase 2 Icon" className="journey-icon" key="icon2" />,
+        <img src={require('../assets/Icon- (2).png')} alt="Phase 3 Icon" className="journey-icon" key="icon3" />
     ];
 
     // Helper to detect mobile (simple window width check)
@@ -29,8 +29,8 @@ const Journey = () => {
             <FadeInSection>
                  <div className="section-container">
                     <div className="text-center mb-16">
-                        <h2 className="section-title">Our Path Forward</h2>
-                        <p className="section-subtitle">Our growth is guided by principles, not a rigid schedule. We grow organically, with the community and the art as our focus.</p>
+                        <h2 className="section-title">The Journey Ahead — A Living Roadmap</h2>
+                        <p className="section-subtitle">Since this project is a personal endeavor, the future is an open book that we will write together. There is no rigid, multi-year schedule. Instead, we have a set of guiding principles for how the collection will grow organically.</p>
                     </div>
                     {isMobile ? (
                         <div className="journey-cards-wrapper">

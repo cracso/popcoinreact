@@ -7,26 +7,16 @@ const Hero = () => (
             <div className="hero-grid">
                 <div className="hero-content">
                     <h1 className="hero-title">
-                        Patience is Power.
-                        <span className="hero-title-highlight">Pop is proof.</span>
+                        The Sentry Sanctuary
+                        <span className="hero-title-highlight">An Artist's Collection & <br /> A Shared Mission.</span>
                     </h1>
-                    <p className="hero-subtitle">
-                        Welcome to the Citadel—a fair launch ecosystem guarded by The Sentry Sloth, designed to give real fans the advantage.
-                    </p>
-                    <div className="hero-actions">
+                    <div className="hero-actions" style={{ marginTop: '2.5rem' }}>
                         <a href="#art" className="btn-primary">
                             View the Collection
                         </a>
                         <a href="#mission" className="btn-secondary">
                             Learn About Our Mission
                         </a>
-                    </div>
-                </div>
-                <div className="hero-image-wrapper">
-                    <div className="hero-image-card">
-                        <img src={require('../assets/upscale-full-body-sloth.png')} 
-                             alt="Sentry the Sloth." 
-                             className="hero-image"/>
                     </div>
                 </div>
             </div>

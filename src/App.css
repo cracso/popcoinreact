@@ -41,9 +41,14 @@ header.shadow-md {
   color: #23263a;
   text-decoration: none;
   letter-spacing: -0.5px;
+  line-height: 1.1;
+  display: inline-block;
+  border: none;
+  margin-bottom: 0;
 }
 .header-title span {
   color: #2e7d32;
+  text-decoration: none;
 }
 .nav-links {
   display: flex;
@@ -51,6 +56,7 @@ header.shadow-md {
   align-items: center;
   font-size: 1.08rem;
   font-weight: 500;
+  flex-direction: row;
 }
 .nav-link {
   color: #44403c;
@@ -237,8 +243,25 @@ header.shadow-md {
     gap: 0.5rem;
     padding: 0.7rem 0.5rem;
   }
-  .header-title {
-    font-size: 1.1rem;
+  .hero-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.5px;
+    padding: 0;
+    text-shadow: 0 1px 4px #0001;
+  }
+  .hero-title-highlight {
+    font-size: 1.05rem;
+    margin-top: 0.15rem;
+    padding: 0.05em 0.18em 0.08em 0.12em;
+    background: linear-gradient(90deg, #e8f5e9 80%, transparent 100%);
+    border-radius: 0.18em;
+    box-shadow: none;
+    text-shadow: 0 1px 0 #fff8;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 }
 
@@ -246,11 +269,29 @@ header.shadow-md {
 .hero-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5.5rem 2rem 2rem 2rem;
+  padding: 3rem 2rem 1.5rem 2rem; /* Less top/bottom padding */
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center; /* Vertically center content */
   gap: 3rem;
+  background-image: url('./assets/hero-backgroundimage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 320px; /* Reduce min-height */
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(46,125,50,0.45) 0%, rgba(255,255,255,0.10) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-grid, .hero-content, .hero-image-wrapper {
+  position: relative;
+  z-index: 1;
 }
 .hero-grid {
   display: flex;
@@ -266,20 +307,27 @@ header.shadow-md {
   margin-top: 0.5rem;
 }
 .hero-title {
-  font-size: clamp(1.3rem, 4vw, 3.5rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
   color: #23263a;
   line-height: 1.05;
-  margin-bottom: 0.5rem;
-  letter-spacing: -1px;
+  margin-bottom: 0.7rem;
+  letter-spacing: -1.5px;
+  text-shadow: 0 2px 16px #0001, 0 1px 0 #fff8;
 }
 .hero-title-highlight {
-  color: #388e3c;
-  display: block;
-  font-size: clamp(1.1rem, 3vw, 3rem);
-  margin-top: 0.2rem;
-  font-weight: 800;
+  color: #2e7d32;
+  display: inline-block;
+  font-size: clamp(1.3rem, 4vw, 2.5rem);
+  margin-top: 0.5rem;
+  font-weight: 900;
   letter-spacing: -1px;
+  background: linear-gradient(90deg, #e8f5e9 60%, transparent 100%);
+  border-radius: 0.3em;
+  padding: 0.1em 0.4em 0.15em 0.2em;
+  box-decoration-break: clone;
+  box-shadow: 0 2px 8px #2e7d3210;
+  text-shadow: 0 1px 0 #fff8;
 }
 .hero-subtitle {
   font-size: 1.18rem;
@@ -314,7 +362,8 @@ header.shadow-md {
 }
 .btn-primary:hover {
   background: #2e7d32;
-  box-shadow: 0 4px 16px #0002;
+  box-shadow: 0 8px 24px #2e7d32cc;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 .btn-secondary {
   background: #e0e0e0;
@@ -384,7 +433,8 @@ header.shadow-md {
 }
 @media (max-width: 600px) {
   .hero-section {
-    padding: 2.5rem 1rem 1.5rem 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+    min-height: 180px;
   }
   .hero-image-card {
     padding: 0.75rem;
@@ -474,6 +524,28 @@ header.shadow-md {
   max-width: 700px;
   margin: 0 auto 2.5rem auto;
   text-align: center;
+}
+.artist-intro-img {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 1.2rem;
+  /* Remove background and shadow for a clean look */
+  background: transparent !important;
+  box-shadow: none !important;
+}
+@media (max-width: 600px) {
+  .artist-intro-img {
+    max-width: 110px;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 900px) {
+  .artist-intro-img {
+    max-width: 320px;
+  }
 }
 
 /* --- Character/Ethos Text & Sentry Cards Layout --- */
@@ -804,10 +876,12 @@ tr:hover {
 
 /* --- Footer --- */
 footer {
-  background: #fff7e8;
-  border-top: 1px solid #e0e0e0;
-  padding: 2rem 0;
+  background: #FDFBF8; /* Match main background */
+  border-top: 1.5px solid #e0e0e0; /* Slightly stronger border */
+  box-shadow: 0 -4px 24px #0001; /* Soft shadow for separation */
+  padding: 3rem 0 2rem 0; /* More vertical padding */
   text-align: center;
+  color: #44403c; /* Unify text color */
 }
 footer h3 {
   color: #23263a;
@@ -832,6 +906,25 @@ footer p {
   margin-top: 2rem;
   color: #888;
   font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .footer-action-buttons {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    align-items: center !important;
+  }
+  .footer-action-buttons a {
+    width: 100%;
+    min-width: 0 !important;
+    max-width: 95vw;
+    font-size: 1rem !important;
+    padding: 1em 0.5em !important;
+    border-radius: 12px !important;
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+  }
 }
 
 /* --- Utility --- */
@@ -1326,5 +1419,59 @@ footer p {
     width: 38px;
     height: 38px;
     border-radius: 50%;
+  }
+}
+.art-ethos-img-featured {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 40px #0002;
+  object-fit: cover;
+  height: auto;
+  margin: 0 auto 2rem auto;
+  display: block;
+}
+@media (max-width: 900px) {
+  .art-ethos-grid {
+    flex-direction: column !important;
+    gap: 2.2rem !important;
+    align-items: center !important;
+  }
+  .art-ethos-img-featured {
+    max-width: 98vw;
+    margin-bottom: 2.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .art-ethos-img-featured {
+    max-width: 100vw;
+    border-radius: 1.1rem;
+  }
+}
+
+/* --- Section Title and Subtitle --- */
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #23263a;
+  margin-bottom: 0.7rem;
+  margin-top: 0;
+  letter-spacing: -1px;
+  text-align: center;
+}
+.section-subtitle {
+  font-size: 1.18rem;
+  color: #44403c;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  font-weight: 500;
+}
+@media (max-width: 700px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+  .section-subtitle {
+    font-size: 1.05rem;
   }
 }
